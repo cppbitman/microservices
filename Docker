@@ -1,0 +1,8 @@
+1 Docker for windows 
+  official image registry : https://hub.docker.com/r/microsoft/
+  base image: 
+    (1) microsoft/windowsservercore : https://hub.docker.com/r/microsoft/windowsservercore/ 10.5G
+    (2) microsoft/nanoserver : https://hub.docker.com/r/microsoft/nanoserver/ 1.11G
+  
+2 Dockerfile for windows
+  microsoft/windowsservercore : msi installer support
