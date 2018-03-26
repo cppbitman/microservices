@@ -6,3 +6,6 @@
   
 2 Dockerfile for windows
   microsoft/windowsservercore : msi installer support
+
+3 Dockerfile Documentation
+  https://docs.docker.com/engine/reference/builder/#usage
