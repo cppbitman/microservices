@@ -9,3 +9,6 @@
 
 3 Dockerfile Documentation
   https://docs.docker.com/engine/reference/builder/#usage
+  
+4 Container sample for windows
+  https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/live/windows-container-samples
