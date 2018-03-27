@@ -7,3 +7,7 @@
   Greater Control of Deployment Methods
   
 3 Clustering Solution : Kubernetes, Docker
+
+4 Service Discovery Mechanism
+    service-side discovery
+    client-side discovery
