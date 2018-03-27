@@ -1,2 +1,9 @@
 1 Microservices Architecture pattern
   Monolithic Architecture pattern
+
+2 Communication Mechanism
+  Distributed Database Architecture
+  Service Discovery Mechanism
+  Greater Control of Deployment Methods
+  
+3 Clustering Solution : Kubernetes, Docker
