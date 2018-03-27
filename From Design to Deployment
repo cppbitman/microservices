@@ -11,3 +11,8 @@
 4 Service Discovery Mechanism
     service-side discovery
     client-side discovery
+
+5 API Gateway
+  request routing, request composition, and protocol translation
+  mask failures in the backend microservices by caching or returning default data
+  Netflix Hystrix circuit breaker pattern
