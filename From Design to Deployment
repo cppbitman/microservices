@@ -36,3 +36,4 @@
 7 Service Discovery
   (1) Client-Side Discovery: Netflix Eureka(RESTful Service Registry), Netflix Ribbon(Load Balancing)
       Drawback: Service Client and Registry Coupled
+  (2) Server-Side Discovery: Load Balancing Router Should be HIGHLY-AVAILABLE
