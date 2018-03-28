@@ -39,3 +39,5 @@
   (2) Server-Side Discovery: Load Balancing Router Should be HIGHLY-AVAILABLE
   (3) Service Registration Pattern
       Self-Registration Pattern PLUS Heart-Beating Keeping-alive
+  (4) Third-Party Registration Pattern
+      Polling Deployment Environment
