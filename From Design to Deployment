@@ -31,4 +31,7 @@
          REST, Thrift
   (3) Message Format
       Text: XML,JSON
-      Binary: Protocol Buffer, Apache Avro   
+      Binary: Protocol Buffer, Apache Avro
+
+7 Service Discovery
+  (1) Client-Side Discovery: Netflix Eureka(RESTful Service Registry), Netflix Ribbon(Load Balancing)
