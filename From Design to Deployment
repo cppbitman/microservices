@@ -16,3 +16,19 @@
   request routing, request composition, and protocol translation
   mask failures in the backend microservices by caching or returning default data
   Netflix Hystrix circuit breaker pattern
+
+6 Inter-Process Communication
+  (1) Handle Partial Failure:
+      Network timeouts
+      Limiting the number of outstanding requests
+      Circuit breaker pattern
+      Provide fallbacks
+  (2) IPC Technologies
+      Asynchronous, Message-Based Communiction
+         one-to-one, one-to-multi
+         RabbitMQ, Apache Kafka, Apache ActiveMQ, NSQ
+      Synchronous, Request/Response IPC
+         REST, Thrift
+  (3) Message Format
+      Text: XML,JSON
+      Binary: Protocol Buffer, Apache Avro   
