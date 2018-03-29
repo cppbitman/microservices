@@ -41,3 +41,8 @@
       Self-Registration Pattern PLUS Heart-Beating Keeping-alive
   (4) Third-Party Registration Pattern
       Polling Deployment Environment
+
+8 Deployment Strategy
+  Multiple Service Instances per Host pattern
+  Service Instance per Host pattern: Service Instance per Virtual Machine and Service Instance per Container
+    Continuous Integration server (Jenkins), Packer
