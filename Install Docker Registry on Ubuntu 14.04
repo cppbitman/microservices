@@ -1,5 +1,5 @@
 1 sudo apt-get install openssh-server
 
-
-
-Reference: https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository
+Reference
+1 https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository
+2 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-
