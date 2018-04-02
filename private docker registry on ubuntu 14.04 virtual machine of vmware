@@ -73,3 +73,19 @@ For more examples and ideas, visit:
 
 6 Pull official image for building private docker registry
 docker pull registry
+
+7 Make .crt and .key for authentication with openssl
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/local.registry.docker.com.key -x509 -days 365 -out certs/local.registry.docker.com.crt
+--------------------------------
+Country Name (2 letter code) [AU]:CN
+State or Province Name (full name) [Some-State]:Shanghai
+Locality Name (eg, city) []:Shanghai
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:kedacom
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []:local.registry.docker.com
+Email Address []:daihongjun@kedacom.com
+----------------------------------------------
+#create user for private registry with username 'admin' and password 'admin'
+docker run --entrypoint htpasswd registry -Bbn admin admin > auth/htpasswd
+
+8 Run private docker registry
