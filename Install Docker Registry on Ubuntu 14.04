@@ -2,7 +2,7 @@
 
 Reference
 1 https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository
-2 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-
+2 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
 3 http://www.larrycaiyu.com/2014/12/01/private-docker-registry-with-nginx.html
 4 https://blog.csdn.net/bxzhu/article/details/73253032
 5 https://github.com/docker/docker-registry
