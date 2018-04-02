@@ -75,7 +75,8 @@ For more examples and ideas, visit:
 docker pull registry
 
 7 Make .crt and .key for authentication with openssl
-openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/local.registry.docker.com.key -x509 -days 365 -out certs/local.registry.docker.com.crt
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/local.registry.docker.com.key -x509 -days 365 
+-out certs/local.registry.docker.com.crt
 --------------------------------
 Country Name (2 letter code) [AU]:CN
 State or Province Name (full name) [Some-State]:Shanghai
@@ -89,3 +90,34 @@ Email Address []:daihongjun@kedacom.com
 docker run --entrypoint htpasswd registry -Bbn admin admin > auth/htpasswd
 
 8 Run private docker registry
+docker run -dit -p 5000:5000 --restart=always --name hub 
+-v $(pwd)/auth:/auth
+-e "REGISTRY_AUTH=htpasswd" 
+-e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm"
+-e "REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd" 
+-v $(pwd)/certs:/certs 
+-e "REGISTRY_HTTP_TLS_CERTIFICATE=/certs/local.registry.docker.com.crt"
+-e "REGISTRY_HTTP_TLS_KEY=/certs/local.registry.docker.com.key" 
+registry
+---------------------------------------
+option explanation
+-d：daemonize background
+-p：port mapping
+--restart=always: automatically restart when container startup
+--name registry：container name
+-v: hostdir:cdir[:rw|ro], directory mapping
+-v $(pwd)/auth:/auth :  password dir mapping
+-v $(pwd)/certs:/certs：ssl certification dir mapping
+
+-e:set environment parameter
+-e REGISTRY_AUTH：验证方式
+-e REGISTRY_AUTH_HTPASSWD_REALM：验证域名
+-e REGISTRY_AUTH_HTPASSWD_PATH：密码文件路径
+-e REGISTRY_HTTP_TLS_CERTIFICATE：ssl证书文件路径
+-e REGISTRY_HTTP_TLS_KEY：ssl证书文件路径
+registry: image name
+[ http://www.cnblogs.com/calvinK/p/7060066.html ]
+
+9 VMWare NAT setting for accessing ubuntu virtual machine 
+编辑(E)->虚拟网络编辑器(N)...->选中NAT模式 更改设置(C)->选中NAT模式 NAT设置(S)...
+->添加(A)...：输入主机端口、虚拟机IP、虚拟机端口后确定
