@@ -21,7 +21,7 @@ sudo apt-get update
 
 4 Get the .deb installation package
 wget https://download.docker.com/linux/ubuntu/dists/trusty/pool/stable/amd64/docker-ce_18.03.0~ce-0~ubuntu_amd64.deb
-[https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-ce]
+[https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-from-a-package]
 sudo apt-get install libltdl7 libsystemd-journal0 (dependency package for docker-ce)
 sudo dpkg -i $(pwd)/docker-ce_18.03.0~ce-0~ubuntu_amd64.deb
 docker version
