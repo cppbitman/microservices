@@ -6,3 +6,41 @@ Distributor ID: Ubuntu
 Description:    Ubuntu 14.04 LTS
 Release:        14.04
 Codename:       trusty
+
+2 Install ssh server on ubuntu for putty
+sudo apt-get install openssh-server
+
+3 Use ubuntu mirrors of 163
+wget http://mirrors.163.com/.help/sources.list.trusty 
+[ http://mirrors.163.com/.help/ubuntu.html ]
+mv /etc/apt/sources.list /etc/apt/sources.list.bk
+mv $(pwd)/sources.list.trusty /etc/apt/sources.list
+sudo apt-get update
+
+
+4 Get the .deb installation package
+wget https://download.docker.com/linux/ubuntu/dists/trusty/pool/stable/amd64/docker-ce_18.03.0~ce-0~ubuntu_amd64.deb
+[https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-ce]
+sudo apt-get install libltdl7 libsystemd-journal0 (dependency package for docker-ce)
+sudo dpkg -i $(pwd)/docker-ce_18.03.0~ce-0~ubuntu_amd64.deb
+docker version
+
+Client:
+ Version:       18.03.0-ce
+ API version:   1.37
+ Go version:    go1.9.4
+ Git commit:    0520e24
+ Built: Wed Mar 21 23:10:22 2018
+ OS/Arch:       linux/amd64
+ Experimental:  false
+ Orchestrator:  swarm
+
+Server:
+ Engine:
+  Version:      18.03.0-ce
+  API version:  1.37 (minimum version 1.12)
+  Go version:   go1.9.4
+  Git commit:   0520e24
+  Built:        Wed Mar 21 23:08:52 2018
+  OS/Arch:      linux/amd64
+  Experimental: false
