@@ -1,7 +1,9 @@
 1 Install ubuntu 14.04 virtual machine on vmware
-uname -a:
+uname -a
+-------------------------------------
 Linux ubuntu 3.13.0-24-generic #46-Ubuntu SMP Thu Apr 10 19:11:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
-lsb_release -a:
+lsb_release -a
+-------------------------------------
 Distributor ID: Ubuntu
 Description:    Ubuntu 14.04 LTS
 Release:        14.04
@@ -23,7 +25,7 @@ wget https://download.docker.com/linux/ubuntu/dists/trusty/pool/stable/amd64/doc
 sudo apt-get install libltdl7 libsystemd-journal0 (dependency package for docker-ce)
 sudo dpkg -i $(pwd)/docker-ce_18.03.0~ce-0~ubuntu_amd64.deb
 docker version
-
+-------------------------------------------------
 Client:
  Version:       18.03.0-ce
  API version:   1.37
@@ -44,5 +46,30 @@ Server:
   OS/Arch:      linux/amd64
   Experimental: false
 
-5 Pull official image for building private docker registry
+5 Test docker-ce
+docker pull hello-world
+docker run hello-world
+-----------------------------------------
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://cloud.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/engine/userguide/
+
+6 Pull official image for building private docker registry
 docker pull registry
