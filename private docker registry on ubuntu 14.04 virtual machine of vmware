@@ -121,3 +121,9 @@ registry: image name
 9 VMWare NAT setting for accessing ubuntu virtual machine 
 编辑(E)->虚拟网络编辑器(N)...->选中NAT模式 更改设置(C)->选中NAT模式 NAT设置(S)...
 ->添加(A)...：输入主机端口、虚拟机IP、虚拟机端口后确定
+--------------------------------------
+Browse for availability testing of registry
+  https://host:5000/v2/_catalog
+Following returned after username and password entered
+  "{"repositories":[]}"
+Indicates no images exists in private registry.
