@@ -118,12 +118,31 @@ option explanation
 registry: image name
 [ http://www.cnblogs.com/calvinK/p/7060066.html ]
 
-9 VMWare NAT setting for accessing ubuntu virtual machine 
+9 VMWare NAT setting for accessing ubuntu virtual machine
 编辑(E)->虚拟网络编辑器(N)...->选中NAT模式 更改设置(C)->选中NAT模式 NAT设置(S)...
 ->添加(A)...：输入主机端口、虚拟机IP、虚拟机端口后确定
 --------------------------------------
 Browse for availability testing of registry
-  https://host:5000/v2/_catalog
+  https://172.16.66.94:5000/v2/_catalog
 Following returned after username and password entered
   "{"repositories":[]}"
 Indicates no images exists in private registry.
+
+
+10 Push image to private docker registry
+Open PowerShell on Windows 10
+docker login 172.16.66.94:5000
+----------------------
+Username: admin
+Password: admin
+Login Succeeded
+----------------------
+docker tag hello-world 172.16.66.94:5000/win/hello-world
+docker push 172.16.66.94:5000/win/hello-world
+----------------------
+Browse the content of registry
+  https://172.16.66.94:5000/v2/_catalog
+Following returned
+  "{"repositories":["win/hello-world"]}"
+
+[ https://docs.docker.com/engine/reference/commandline ]
