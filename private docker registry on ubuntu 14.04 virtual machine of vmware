@@ -17,7 +17,6 @@ mv /etc/apt/sources.list /etc/apt/sources.list.bk
 mv $(pwd)/sources.list.trusty /etc/apt/sources.list
 sudo apt-get update
 
-
 4 Get the .deb installation package
 wget https://download.docker.com/linux/ubuntu/dists/trusty/pool/stable/amd64/docker-ce_18.03.0~ce-0~ubuntu_amd64.deb
 [https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-ce]
@@ -44,3 +43,6 @@ Server:
   Built:        Wed Mar 21 23:08:52 2018
   OS/Arch:      linux/amd64
   Experimental: false
+
+5 Pull official image for building private docker registry
+docker pull registry
