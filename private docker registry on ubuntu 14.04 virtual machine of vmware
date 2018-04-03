@@ -177,7 +177,7 @@ docker run -dit -p 8080:8080 --restart=always --name registry-web-ui --link hub
 -e REGISTRY_URL=https://172.16.66.94:5000/v2 
 -e REGISTRY_TRUST_ANY_SSL=true 
 -e REGISTRY_BASIC_AUTH="YWRtaW46YWRtaW4=" 
--e REGISTRY_NAME=http://172.16.66.94:5000
+-e REGISTRY_NAME=https://172.16.66.94:5000
 --add-host 172.16.66.94:192.168.85.138 hyper/docker-registry-web
 ----------------------------------------------
 --link hub: 容器之间建立联系
