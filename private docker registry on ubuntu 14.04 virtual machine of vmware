@@ -189,3 +189,6 @@ docker run -dit -p 8080:8080 --restart=always --name registry-web-ui --link hub
 ------------------------------------------------
 Browser for private registry
  [ http://172.16.66.94:8080/ ]
+
+13 Reference
+http://www.cnblogs.com/calvinK/p/7060066.html
