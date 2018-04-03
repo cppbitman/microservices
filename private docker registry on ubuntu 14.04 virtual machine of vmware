@@ -90,15 +90,16 @@ Email Address []:daihongjun@kedacom.com
 docker run --entrypoint htpasswd registry -Bbn admin admin > auth/htpasswd
 
 8 Run private docker registry
-docker run -dit -p 5000:5000 --restart=always --name hub 
--v $(pwd)/auth:/auth
--e "REGISTRY_AUTH=htpasswd" 
--e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm"
--e "REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd" 
--v $(pwd)/certs:/certs 
--e "REGISTRY_HTTP_TLS_CERTIFICATE=/certs/local.registry.docker.com.crt"
--e "REGISTRY_HTTP_TLS_KEY=/certs/local.registry.docker.com.key"
--v $(pwd)/registry:/var/lib/registry
+docker run -dit -p 5000:5000 --restart=always --name hub \
+-v $(pwd)/auth:/auth \
+-e REGISTRY_AUTH=htpasswd \
+-e REGISTRY_AUTH_HTPASSWD_REALM="Registry Realm" \
+-e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \
+-v $(pwd)/certs:/certs \
+-e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/local.registry.docker.com.crt \
+-e REGISTRY_HTTP_TLS_KEY=/certs/local.registry.docker.com.key \
+-e REGISTRY_STORAGE_DELETE_ENABLED=true \
+-v $(pwd)/registry:/var/lib/registry \
 registry
 ---------------------------------------
 option explanation
