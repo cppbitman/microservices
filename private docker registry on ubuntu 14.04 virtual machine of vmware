@@ -171,7 +171,7 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/engine/userguide/
 
-12 Install web ui for private docker registry 
+12 Install web ui for private docker registry [ https://hub.docker.com/r/hyper/docker-registry-web/ ]
 docker pull hyper/docker-registry-web
 docker run -dit -p 8080:8080 --restart=always --name registry-web-ui --link hub 
 -e REGISTRY_URL=https://172.16.66.94:5000/v2 
